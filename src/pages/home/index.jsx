@@ -1,6 +1,11 @@
+import { useDispatch, useSelector } from "react-redux";
 import "./styles.css";
+import { setMovies } from "../../store/slices/moviesLoaded";
 
 export default function Home() {
+  const movies = useSelector((state) => state.movies).movies;
+  const dispatch = useDispatch();
+  console.log("Loaded");
   return (
     <div>
       <p style={{ paddingTop: "500px" }}>
