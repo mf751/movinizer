@@ -1,0 +1,64 @@
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav .left {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 0;
+  height: 66px;
+  text-decoration: none;
+}
+
+nav .left img.logo {
+  width: 40px;
+  align-self: flex-start;
+}
+
+nav .left span {
+  color: black;
+  font-size: 32px;
+  font-weight: bolder;
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  letter-spacing: 1.2px;
+  align-self: flex-end;
+}
+
+nav .search {
+  width: 50%;
+}
+
+nav .search form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav textarea {
+  resize: none;
+  width: 50%;
+}
+
+nav textarea:active {
+  outline: none;
+  border: none;
+}
+
+nav .right {
+  display: flex;
+  gap: 10px;
+}
+
+nav .right a {
+  color: white;
+  font-weight: bolder;
+  font-family: "Roboto Slab";
+  font-size: 20px;
+  text-decoration: none;
+  background-color: #5c34d7;
+}

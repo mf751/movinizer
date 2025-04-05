@@ -1,18 +1,20 @@
 import { Routes, Route } from "react-router-dom";
-
-function Home() {
-  return <h2>Meooww</h2>;
-}
+import Home from "./pages/home";
+import Navbar from "./pages/nav";
 
 function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/t" element={<div>HIII</div>} />
-      </Routes>
-      ;
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Navbar />
+            <Home />
+          </>
+        }
+      />
+    </Routes>
   );
 }
 
