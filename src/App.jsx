@@ -4,17 +4,19 @@ import Navbar from "./pages/nav";
 
 function App() {
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <Navbar />
-            <Home />
-          </>
-        }
-      />
-    </Routes>
+    <div className="container">
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          }
+        />
+      </Routes>
+    </div>
   );
 }
 

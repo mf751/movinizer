@@ -1,57 +1,84 @@
 nav {
-  background-color: white;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  position: absolute;
+  width: calc(100% - 300px);
 }
 
 nav .left {
   display: flex;
   justify-content: center;
-  gap: 5px;
-  padding: 10px 0;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 0;
   height: 66px;
   text-decoration: none;
 }
 
-nav .left img.logo {
-  width: 40px;
-  align-self: flex-start;
+nav .left .logo {
+  width: 50px;
+  height: 50px;
 }
 
 nav .left span {
-  color: black;
-  font-size: 32px;
+  color: white;
+  font-size: 36px;
   font-weight: bolder;
   font-family: "Bebas Neue", sans-serif;
   font-style: normal;
   letter-spacing: 1.2px;
-  align-self: flex-end;
 }
 
 nav .search {
   width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 nav .search form {
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+  width: 60%;
 }
 
-nav textarea {
+nav .search-input {
+  width: 100%;
+  font-family: sans-serif;
+  background-color: transparent;
   resize: none;
-  width: 50%;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  resize: none;
+  height: fit-content;
+  border: 2px solid #fff;
+  border-radius: 8px;
 }
 
-nav textarea:active {
-  outline: none;
-  border: none;
+nav .search-input::placeholder {
+  color: white;
+}
+
+nav .search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  translate: 0 -50%;
+}
+
+nav .search-input:focus {
+  outline: 2px solid var(--accent);
 }
 
 nav .right {
   display: flex;
-  gap: 10px;
+  gap: 25px;
 }
 
 nav .right a {
@@ -60,5 +87,22 @@ nav .right a {
   font-family: "Roboto Slab";
   font-size: 20px;
   text-decoration: none;
-  background-color: #5c34d7;
+  position: relative;
+}
+
+nav .right a::after {
+  content: "";
+  width: 4px;
+  height: 100%;
+  left: -8px;
+  top: 0;
+  position: absolute;
+  background-color: var(--accent);
+  transition: width 0.3s;
+  z-index: -1;
+  border-radius: 2px;
+}
+
+nav .right a:hover::after {
+  width: calc(100% + 16px);
 }
