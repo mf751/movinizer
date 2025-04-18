@@ -1,0 +1,19 @@
+.home-container {
+  height: 100vh;
+}
+
+.home-container .header-movie {
+  margin: 0;
+  /* height: 100%; */
+  aspect-ratio: 16/7;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 551px) {
+  .home-container .header-movie {
+    height: 40%;
+    background-position: center;
+    aspect-ratio: unset;
+  }
+}

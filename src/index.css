@@ -1,8 +1,10 @@
 :root {
-  --accent: #be123c;
-  color-scheme: dark;
-  color: rgba(255, 255, 255, 1);
-  background-color: #000000;
+  --accent: #be122c;
+  --light-accent: #eb2d4a;
+  --main-margin: 100px;
+  --main-margin-phone: 15px;
+  color-scheme: light;
+  background-color: #fff;
 }
 
 body {
@@ -14,7 +16,7 @@ body {
   box-sizing: border-box;
 }
 
-.container {
-  padding: 0 150px;
-  position: relative;
+.main-container {
+  height: 100vh;
+  display: flow-root;
 }
