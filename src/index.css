@@ -3,6 +3,7 @@
   --light-accent: #eb2d4a;
   --main-margin: 100px;
   --main-margin-phone: 15px;
+  --movie-list-additional-padding: 60px;
   color-scheme: light;
   background-color: #fff;
 }
@@ -17,6 +18,6 @@ body {
 }
 
 .main-container {
-  height: 100vh;
+  height: 100dvh;
   display: flow-root;
 }

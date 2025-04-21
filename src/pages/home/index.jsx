@@ -3,6 +3,7 @@ import "./styles.css";
 import { setMovies } from "../../store/slices/moviesLoaded";
 import { useEffect, useState } from "react";
 import { FaImdb } from "react-icons/fa";
+import MovieList from "../movieList/index.jsx";
 
 export default function Home() {
   const movies = useSelector((state) => state.movies).movies;
@@ -33,11 +34,14 @@ export default function Home() {
       >
         <h2 style={{ marginTop: "0" }}>{movies[0]?.title}</h2>
         <p className="rating">
-          <FaImdb />
+          <FaImdb className="imdb" />
           <span>{movies[0]?.vote_average.toString().substring(0, 3)}</span>
+          <span>, {movies[0]?.release_date.substring(0, 4)}</span>
         </p>
         <p>{movies[0]?.overview.substring(0, 250) + "..."}</p>
       </div>
+      <MovieList movieList={movies.slice(1)} listTitle={"Trending"} />
+      <MovieList movieList={movies.slice(1)} listTitle={"Trending"} />
     </div>
   );
 }

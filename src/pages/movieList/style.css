@@ -1,0 +1,38 @@
+.movie-list-container {
+  padding: 0 calc(var(--main-margin) + var(--movie-list-additional-padding));
+}
+
+.movie-list-container h1 {
+  font-family: "Roboto Slab";
+}
+
+.movie-list {
+  display: flex;
+  overflow: scroll;
+  gap: 3rem;
+}
+
+.movie-card .poster {
+  width: 250px;
+  height: 375px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-card img {
+  width: 100%;
+}
+
+.movie-card p {
+  font-family: "Roboto Slab";
+  color: #888;
+  font-weight: 600;
+  margin: 4px 0 0;
+  font-size: 1.2rem;
+}
+
+.movie-card .title {
+  font-weight: bolder;
+  font-family: "Roboto Slab";
+}

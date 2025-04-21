@@ -184,5 +184,6 @@ nav .right a:hover::after {
     height: fit-content;
     border: 2px solid #fff;
     border-radius: 8px;
+    position: relative;
   }
 }
