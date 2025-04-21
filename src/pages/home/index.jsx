@@ -29,7 +29,6 @@ export default function Home() {
       });
     });
   }, []);
-  console.log;
   return (
     <div className="home-container">
       <div

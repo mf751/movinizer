@@ -136,6 +136,7 @@ nav .right a:hover::after {
     display: none;
   }
   .bottom {
+    z-index: 23;
     display: flex;
     position: fixed;
     bottom: 0;

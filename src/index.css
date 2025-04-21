@@ -4,6 +4,7 @@
   --main-margin: 100px;
   --main-margin-phone: 15px;
   --movie-list-additional-padding: 60px;
+  --movie-list-additional-padding-phone: 4px;
   color-scheme: light;
   background-color: #fff;
 }
