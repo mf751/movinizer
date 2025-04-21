@@ -1,5 +1,29 @@
 .movie-list-container {
-  padding: 0 calc(var(--main-margin) + var(--movie-list-additional-padding));
+  position: relative;
+  padding: 1.5rem
+    calc(var(--main-margin) + var(--movie-list-additional-padding)) 0;
+}
+
+.movie-list-container .arrow {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  top: 50%;
+  translate: 0 -50%;
+  transition: 0.3s;
+}
+
+.movie-list-container .arrow:hover {
+  cursor: pointer;
+  translate: 0 -70%;
+}
+
+.movie-list-container .arrow.right {
+  right: calc(var(--movie-list-additional-padding));
+}
+
+.movie-list-container .arrow.left {
+  left: calc(var(--movie-list-additional-padding));
 }
 
 .movie-list-container h1 {

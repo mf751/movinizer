@@ -2,7 +2,6 @@ import { FaImdb } from "react-icons/fa";
 import GetGenre from "../../helpers/genres";
 
 export default function MovieCard({ movie }) {
-  console.log(movie);
   return (
     <div className="movie-card">
       <div className="poster">
