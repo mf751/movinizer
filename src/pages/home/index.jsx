@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./styles.css";
-import { setMovies } from "../../store/slices/moviesLoaded";
+import { setGenres, setMovies } from "../../store/slices/moviesLoaded";
 import { useEffect, useState } from "react";
 import { FaImdb } from "react-icons/fa";
 import MovieList from "../movieList/index.jsx";
@@ -12,8 +12,13 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);
+    fetch(
+      `https://api.themoviedb.org/3/genre/movie/list?api_key=${import.meta.env.VITE_API_KEY}&language=en-US`,
+    ).then((res) => res.json().then((res) => dispatch(setGenres(res.genres))));
     fetch("https://api.themoviedb.org/3/trending/movie/week?page=4", {
-      headers: { Authorization: `Bearer ${import.meta.env.VITE_API_KEY}` },
+      headers: {
+        Authorization: `Bearer ${import.meta.env.VITE_API_ACCESS_TOKEN}`,
+      },
     }).then((res) => {
       res.json().then((res) => {
         setLoading(false);
@@ -24,6 +29,7 @@ export default function Home() {
       });
     });
   }, []);
+  console.log;
   return (
     <div className="home-container">
       <div
@@ -40,8 +46,8 @@ export default function Home() {
         </p>
         <p>{movies[0]?.overview.substring(0, 250) + "..."}</p>
       </div>
-      <MovieList movieList={movies.slice(1)} listTitle={"Trending"} />
-      <MovieList movieList={movies.slice(1)} listTitle={"Trending"} />
+      <MovieList movieList={movies.slice(1)} listTitle={"Trending Movies"} />
+      <MovieList movieList={movies.slice(1)} listTitle={"Trending Movies"} />
     </div>
   );
 }

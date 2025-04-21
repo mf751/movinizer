@@ -1,4 +1,5 @@
 import { FaImdb } from "react-icons/fa";
+import GetGenre from "../../helpers/genres";
 
 export default function MovieCard({ movie }) {
   console.log(movie);
@@ -16,9 +17,12 @@ export default function MovieCard({ movie }) {
       </p>
       <h2 className="title">{movie.title}</h2>
       <div className="rating">
-        <FaImdb />
+        <FaImdb className="imdb" />
         <span>{movie.vote_average.toString().substring(0, 3)}</span>
       </div>
+      <p className="genres">
+        {movie.genre_ids.map((id) => GetGenre(id) + ", ")}
+      </p>
     </div>
   );
 }

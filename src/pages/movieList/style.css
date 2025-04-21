@@ -4,11 +4,12 @@
 
 .movie-list-container h1 {
   font-family: "Roboto Slab";
+  margin: 3rem 0;
 }
 
 .movie-list {
   display: flex;
-  overflow: scroll;
+  overflow-x: scroll;
   gap: 3rem;
 }
 
@@ -26,7 +27,7 @@
 
 .movie-card p {
   font-family: "Roboto Slab";
-  color: #888;
+  color: #bbb;
   font-weight: 600;
   margin: 4px 0 0;
   font-size: 1.2rem;
@@ -35,4 +36,21 @@
 .movie-card .title {
   font-weight: bolder;
   font-family: "Roboto Slab";
+}
+
+.movie-card .rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.movie-card .rating span {
+  font-family: "Roboto Slab";
+  font-weight: bolder;
+}
+
+.movie-card .rating .imdb {
+  color: gold;
+  width: 30px;
+  height: 30px;
 }
