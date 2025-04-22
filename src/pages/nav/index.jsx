@@ -103,15 +103,15 @@ export default function Home() {
           </form>
         </div>
         <div className="right">
-          <a href="/catagories">Catagories</a>
-          <a href="/favorites">Favorites</a>
+          <a href="/">Catagories</a>
+          <a href="/">Favorites</a>
         </div>
       </nav>
       <div className="bottom">
         {navItems.map((x, idx) => {
           const Icon = currentPath === x.path ? x.iconFilled : x.iconOutlined;
           return (
-            <a key={idx} href={`${x.path}`}>
+            <a key={idx} href={`/`}>
               <Icon size={28} />
               <span>{x.name}</span>
             </a>
