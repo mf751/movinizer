@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./styles.css";
 import { FaSearch } from "react-icons/fa";
 import {
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <>
       <nav>
-        <a href="/" className="left">
+        <Link to="/" className="left">
           <svg
             className="logo"
             fill="#fff"
@@ -91,7 +91,7 @@ export default function Home() {
           </svg>
 
           <span>Movinizer</span>
-        </a>
+        </Link>
         <div className="search">
           <form>
             <input
@@ -103,18 +103,18 @@ export default function Home() {
           </form>
         </div>
         <div className="right">
-          <a href="/">Catagories</a>
-          <a href="/">Favorites</a>
+          <Link href="/">Catagories</Link>
+          <Link href="/">Favorites</Link>
         </div>
       </nav>
       <div className="bottom">
         {navItems.map((x, idx) => {
           const Icon = currentPath === x.path ? x.iconFilled : x.iconOutlined;
           return (
-            <a key={idx} href={`/`}>
+            <Link key={idx} to={x.path}>
               <Icon size={28} />
               <span>{x.name}</span>
-            </a>
+            </Link>
           );
         })}
       </div>
